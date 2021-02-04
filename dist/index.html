@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+    <title>kb-vv导航</title>
+    <style>.icon {
+        width: 1em;
+        height: 1em;
+        vertical-align: -0.15em;
+        fill: currentColor;
+        overflow: hidden;
+      }</style>
+    <link rel="stylesheet" href="style.75b523a4.css">
+  </head>
+  <body>
+    <header class="globalHeader">
+      <div class="clock"><p id="time">12.12.12.AM</p></div>
+      <script>// get element
+var time = document.querySelector("#time");
+up(time);
+
+function up(time_el) {
+  // get time
+  var date = new Date();
+  var h = date.getHours();
+  var m = date.getMinutes();
+  var s = date.getSeconds(); // AM and PM
+
+  var day_night = "AM"; // if (h > 12) {
+  //   h = h - 12;
+  //   day_night = "PM";
+  // }
+
+  if (h <= 12) {
+    day_night = "AM";
+  } else if (h > 12 && h < 24) {
+    day_night = "PM";
+  } else if (H == 24) {
+    h = 0;
+  } // (if min and sec) < 10 + 0
+
+
+  if (h < 10) {
+    h = "0" + h;
+  }
+
+  if (m < 10) {
+    m = "0" + m;
+  }
+
+  if (s < 10) {
+    s = "0" + s;
+  } //assign to time
+
+
+  time.textContent = h + ":" + m + ":" + s + " " + day_night;
+}
+
+setInterval(function () {
+  up(time);
+}, 1000);</script>
+
+      <form class="searchForm" method="get" action="https://www.baidu.com/s" target="_blank">
+        <input name="wd" type="text" style="
+            background-color: rgba(255, 255, 255, 0.3);
+            color: rgb(10, 10, 10);
+          ">
+        <button type="submit" style="
+            background-color: rgba(255, 255, 255, 0.3);
+            color: rgb(10, 10, 10);
+          ">
+          搜索
+        </button>
+      </form>
+    </header>
+    <main class="globalMain">
+      <ul class="siteList">
+        <li class="last">
+          <div class="addButton">
+            <div class="icon-wrapper">
+              <svg class="icon">
+                <use xlink:href="#icon-add"></use>
+              </svg>
+            </div>
+            <div class="text">新增网站</div>
+          </div>
+        </li>
+      </ul>
+    </main>
+    <script src="//at.alicdn.com/t/font_2360636_kw9u24g4w.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="main.10482a1e.js"></script>
+  </body>
+</html>
