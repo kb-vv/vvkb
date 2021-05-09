@@ -25,7 +25,7 @@ body {
   min-width: 100%;
   min-height: 100vh;
   background-color: #eeeeee;
-  background-image: url(./5.jpg);
+  background-image: url(/5.91c3498f.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   filter: alpha(opacity=80);
@@ -34,7 +34,7 @@ body {
 }
 @media (min-width: 500px) {
   body {
-    background-image: url(./1.jpg);
+    background-image: url(/1.e2c48800.jpg);
   }
 }
 
@@ -205,3 +205,6 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+
+/*# sourceMappingURL=/style.e308ff8e.css.map */

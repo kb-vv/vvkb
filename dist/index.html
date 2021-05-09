@@ -11,35 +11,28 @@
         fill: currentColor;
         overflow: hidden;
       }</style>
-    <link rel="stylesheet" href="style.75b523a4.css">
-  </head>
+    <link rel="stylesheet" href="/style.e308ff8e.css">
+  <script src="/style.e308ff8e.js"></script></head>
   <body>
     <header class="globalHeader">
       <div class="clock"><p id="time">12.12.12.AM</p></div>
-      <script>// get element
-var time = document.querySelector("#time");
+      <script>var time = document.querySelector("#time");
 up(time);
 
-function up(time_el) {
-  // get time
+function up(time) {
   var date = new Date();
   var h = date.getHours();
   var m = date.getMinutes();
-  var s = date.getSeconds(); // AM and PM
-
-  var day_night = "AM"; // if (h > 12) {
-  //   h = h - 12;
-  //   day_night = "PM";
-  // }
+  var s = date.getSeconds();
+  var day_night = "AM";
 
   if (h <= 12) {
     day_night = "AM";
   } else if (h > 12 && h < 24) {
     day_night = "PM";
-  } else if (H == 24) {
+  } else if (h === 24) {
     h = 0;
-  } // (if min and sec) < 10 + 0
-
+  }
 
   if (h < 10) {
     h = "0" + h;
@@ -51,8 +44,7 @@ function up(time_el) {
 
   if (s < 10) {
     s = "0" + s;
-  } //assign to time
-
+  }
 
   time.textContent = h + ":" + m + ":" + s + " " + day_night;
 }
@@ -66,12 +58,7 @@ setInterval(function () {
             background-color: rgba(255, 255, 255, 0.3);
             color: rgb(10, 10, 10);
           ">
-        <button type="submit" style="
-            background-color: rgba(255, 255, 255, 0.3);
-            color: rgb(10, 10, 10);
-          ">
-          搜索
-        </button>
+        <button type="submit">搜索</button>
       </form>
     </header>
     <main class="globalMain">
@@ -90,6 +77,6 @@ setInterval(function () {
     </main>
     <script src="//at.alicdn.com/t/font_2360636_kw9u24g4w.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="main.10482a1e.js"></script>
+    <script src="/main.1f19ae8e.js"></script>
   </body>
 </html>

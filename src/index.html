@@ -22,32 +22,21 @@
     <header class="globalHeader">
       <div class="clock"><p id="time">12.12.12.AM</p></div>
       <script>
-        // get element
         var time = document.querySelector("#time");
         up(time);
-        function up(time_el) {
-          // get time
+        function up(time) {
           let date = new Date();
-
           let h = date.getHours();
           let m = date.getMinutes();
           let s = date.getSeconds();
-          // AM and PM
           let day_night = "AM";
-
-          // if (h > 12) {
-          //   h = h - 12;
-          //   day_night = "PM";
-          // }
-
           if (h <= 12) {
             day_night = "AM";
           } else if (h > 12 && h < 24) {
             day_night = "PM";
-          } else if (H == 24) {
+          } else if (h === 24) {
             h = 0;
           }
-          // (if min and sec) < 10 + 0
           if (h < 10) {
             h = "0" + h;
           }
@@ -57,10 +46,8 @@
           if (s < 10) {
             s = "0" + s;
           }
-          //assign to time
           time.textContent = h + ":" + m + ":" + s + " " + day_night;
         }
-
         setInterval(() => {
           up(time);
         }, 1000);
@@ -80,15 +67,7 @@
             color: rgb(10, 10, 10);
           "
         />
-        <button
-          type="submit"
-          style="
-            background-color: rgba(255, 255, 255, 0.3);
-            color: rgb(10, 10, 10);
-          "
-        >
-          搜索
-        </button>
+        <button type="submit">搜索</button>
       </form>
     </header>
     <main class="globalMain">
